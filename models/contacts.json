@@ -3,7 +3,7 @@
     "id": "1",
     "name": "Allen Raymond",
     "email": "nulla.ante@vestibul.co.uk",
-    "phone": "(992) 914-3792"
+    "phone": "(992) 888-3792"
   },
   {
     "id": "2",
@@ -58,5 +58,17 @@
     "name": "Alec Howard",
     "email": "Donec.elementum@scelerisquescelerisquedui.net",
     "phone": "(748) 206-2688"
+  },
+  {
+    "id": "79975f25-63fd-45b7-9e31-6c1994939d00",
+    "name": "Tom Cruise",
+    "email": "cruise@ukr.net",
+    "phone": "(992)987-6543"
+  },
+  {
+    "id": "467e80ae-59a5-4a2e-aa9c-2b8a4bb46f76",
+    "name": "Tom Hanks",
+    "email": "hanks@ukr.net",
+    "phone": "(992) 777-8888"
   }
 ]
