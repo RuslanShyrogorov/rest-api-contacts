@@ -1,9 +1,9 @@
 const { HttpError } = require("../../helpers");
-const { Contact, schemas } = require("../../models");
+const { Contact, schemasContact } = require("../../models");
 
 const updateFavorite = async (req, res, next) => {
   try {
-    const { error } = schemas.updateFavoriteSchema.validate(req.body);
+    const { error } = schemasContact.updateFavoriteSchema.validate(req.body);
     if (error) {
       throw HttpError(400, error.message);
     }
