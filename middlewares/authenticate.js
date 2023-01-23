@@ -14,6 +14,10 @@ const authenticate = async (req, res, next) => {
     next(HttpError(401, "Not authorized"));
   }
 
+  if (!token) {
+    next(HttpError(401, "Not authorized"));
+  }
+
   try {
     const { id } = jwt.verify(token, SECRET_JWT_KEY); // [method:verify] returned payload, my payload has id
 
