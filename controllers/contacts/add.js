@@ -1,16 +1,19 @@
 // const { contacts } = require("../../models");
 const { HttpError } = require("../../helpers");
-const { schemas } = require("../../models");
+const { schemasContact } = require("../../models");
 
 const { Contact } = require("../../models");
 
 const add = async (req, res, next) => {
   try {
-    const { error } = schemas.addSchema.validate(req.body);
+    const { error } = schemasContact.addSchema.validate(req.body);
     if (error) {
       throw HttpError(400, error.message);
     }
-    const result = await Contact.create(req.body);
+
+    const { _id: owner } = req.user;
+    const result = await Contact.create({ ...req.body, owner });
+
     res.status(201).json(result);
   } catch (error) {
     next(error);
