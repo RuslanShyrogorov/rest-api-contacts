@@ -19,7 +19,6 @@ contactsRouter.post(
   "/",
   authenticate,
   validateBody(schemasContact.addSchema),
-  // ctrl.add
   ctrlWrapper(ctrl.add)
 );
 
